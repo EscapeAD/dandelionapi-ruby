@@ -10,7 +10,7 @@ module Dandelionapi
 
     class Request < Analysis::Request
 
-      ENDPOINT = "/sent/v1"
+      ENDPOINT = "/datatxt/sent/v1"
 
       MANDATORY_FIELDS = [
         "text",
@@ -27,23 +27,23 @@ module Dandelionapi
         "text" => {
           valid: lambda {|value| value.is_a? String},
           error_message: 'text needs to be String'
-        }, 
+        },
         "url" => {
           valid: lambda {|value| value.is_a? String},
           error_message: 'url needs to be String'
-        },  
+        },
         "html" => {
           valid: lambda {|value| value.is_a? String},
           error_message: 'html needs to be String'
-        },  
+        },
         "html_fragment" => {
           valid: lambda {|value| value.is_a? String},
           error_message: 'html_fragment needs to be String'
-        }, 
+        },
         "lang" => {
           valid: lambda {|value| (value.is_a? String and ["de", "en", "fr", "it", "pt", "auto"].include? value)},
           error_message: 'lang needs to be one of the following values: "de", "en", "fr", "it", "pt", "auto"'
-        } 
+        }
       }
 
     end

@@ -10,7 +10,7 @@ module Dandelionapi
 
   	class Request < Comparison::Request
 
-	    ENDPOINT = "/sim/v1"
+	    ENDPOINT = "/datatxt/sim/v1"
 
       MANDATORY_FIELDS_1 = [
         "text1",
